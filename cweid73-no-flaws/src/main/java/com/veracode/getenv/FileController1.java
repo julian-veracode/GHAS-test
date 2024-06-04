@@ -12,7 +12,7 @@ public class FileController1 {
 
     @GetMapping("/delete")
     public String delete(@RequestParam("filename") String filename) throws IOException {
-        File f = new File("filename");
+        File f = new File(filename);
         boolean deleted = f.delete();
         if (deleted) {
             return "Deleted";
